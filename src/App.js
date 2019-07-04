@@ -1,5 +1,21 @@
 import React from 'react';
+
 import './App.css';
+
+
+
+import Header from'./components/Header';
+
+import Footer from'./components/Footer';
+
+import SideBar from'./components/SideBar';
+
+import Content from'./components/Content';
+
+
+
+
+
 
 // function App() {
 //   return (
@@ -27,34 +43,29 @@ import './App.css';
 
 class App extends React.Component{
   state = {
-    conuntry: "armenia",
+    conuntry: "Armenia",
   }
   constructor(props){
     super(props);
-    console.log ("constructor")
+    this.handleOnChangeCountry = this.handleOnChangeCountry.bind(this);
   }
-  componentDidMount(){
-    console.log("componentDidMount")
+  handleOnChangeCountry(){
+    this.setState({conuntry: "USA"})
   }
-  static getDerivedStateFromProps(){
-    console.log("getDerivedStateFromProps");
-    return null;
-  }
-// onClickHandler(e){
-//     this.setState(country);
-//     }
   render(){
     console.log("render")
     return (
-      <div>
-        Barev Ashxarh o_O{this.state.conuntry}
-        <button onClick={this.onClickHandler}>
-          poxel text@
-          </button>  
+      <>
+        {/* <p>{this.state.conuntry}</p> 
+        <button onClick={this.handleOnChangeCountry}>poxel yerkir@</button>  */}
+        <Header/>
+        <SideBar/>
+        <Footer/>
+        <Content/>
+        </>
           
-      </div>
+      
     )
   }
 }
-console.log("123");
 export default App;
