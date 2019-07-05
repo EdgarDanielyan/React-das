@@ -1,8 +1,8 @@
 import React from 'react';
 function SideBar(){
     return(
-        <div>
-            SideBar
+        <div className="sidebar">
+            <p>I am sidebar</p>
         </div>
     )
 }

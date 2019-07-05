@@ -1,6 +1,14 @@
-import React from 'react';
+import React from 'react'
 
 import './App.css';
+
+import './components/Header.css';
+
+import './components/Footer.css';
+
+import './components/SideBar.css';
+
+import './components/Content.css';
 
 
 
@@ -8,10 +16,7 @@ import Header from'./components/Header';
 
 import Footer from'./components/Footer';
 
-import SideBar from'./components/SideBar';
-
 import Content from'./components/Content';
-
 
 
 
@@ -43,25 +48,24 @@ import Content from'./components/Content';
 
 class App extends React.Component{
   state = {
-    conuntry: "Armenia",
+    country: "Armenia",
   }
   constructor(props){
     super(props);
     this.handleOnChangeCountry = this.handleOnChangeCountry.bind(this);
   }
   handleOnChangeCountry(){
-    this.setState({conuntry: "USA"})
+    this.setState({country: "USA"})
   }
   render(){
     console.log("render")
     return (
       <>
-        {/* <p>{this.state.conuntry}</p> 
+        {/* <p>{this.state.country}</p>
         <button onClick={this.handleOnChangeCountry}>poxel yerkir@</button>  */}
         <Header/>
-        <SideBar/>
-        <Footer/>
         <Content/>
+        <Footer/>
         </>
           
       
