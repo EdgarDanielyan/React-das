@@ -1,19 +1,18 @@
 import React from 'react';
+import { Button } from "reactstrap";
 
-function Header() {
+function Header(props) {
     return (
         <header>
 
-            <div className="burger_menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+           <Button onClick={props.onToggleHandler} type="button" color="primary">
+               burger
+           </Button>
             <nav>
                 <ul className="navigation">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
 
             </nav>
